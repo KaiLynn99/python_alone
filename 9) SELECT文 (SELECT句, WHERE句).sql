@@ -19,3 +19,17 @@ limit 10;
 select first_name, last_name
 from customer
 limit 10;
+
+select last_name, first_name
+from customer
+limit 10;
+
+-- • すべての列を取得する
+select *
+from customer
+limit 10;
+
+-- 2-2. DISTINCTによる重複の削除
+
+-- • SELECT文の実行結果から重複する行を削除し、
+--   一意の値のみを取得する
