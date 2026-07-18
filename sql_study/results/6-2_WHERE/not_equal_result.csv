@@ -1,0 +1,4 @@
+﻿customer_id,store_id,first_name,last_name,email,address_id,active,create_date,last_update
+16,2,SANDRA,MARTIN,SANDRA.MARTIN@sakilacustomer.org,20,0,2006-02-14 22:04:36,2006-02-15 04:57:20
+64,2,JUDITH,COX,JUDITH.COX@sakilacustomer.org,68,0,2006-02-14 22:04:36,2006-02-15 04:57:20
+124,1,SHEILA,WELLS,SHEILA.WELLS@sakilacustomer.org,128,0,2006-02-14 22:04:36,2006-02-15 04:57:20
