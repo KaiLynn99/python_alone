@@ -1,0 +1,3 @@
+!sql_study/results/
+!sql_study/results/**/
+!sql_study/results/**/*.csv
