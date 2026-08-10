@@ -1,0 +1,150 @@
+table Sales_2025
+	lineageTag: 7b8dad0b-5770-441b-879e-45681a2e514e
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 20ce423e-8b4b-4e39-ab91-00180dd0532e
+		summarizeBy: count
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: string
+		lineageTag: c64e300b-40ce-4754-95df-e1acae4ac293
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: 82f8bfdb-b432-438a-a1c1-1161a11c5948
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: 9dca2cf7-ca27-4f48-b239-fbb4b34c8b7e
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: c22d2bd9-f78e-442d-ac56-2cf0f552aaf2
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		lineageTag: 082fd276-c7d4-4510-8e6b-03592891e2b5
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 6ace0093-6f23-47e6-b884-f44d320c2fa0
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: efe70e6a-8d46-4fef-a80b-b265340e6ceb
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: 0
+		lineageTag: cf6bdd0d-3202-4862-bd1c-0704cff09872
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: int64
+		formatString: 0
+		lineageTag: 265f6f1d-8283-43af-b30e-3c95ab34715b
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales
+		dataType: int64
+		formatString: 0
+		lineageTag: 7412623f-97aa-4901-a60f-2c433c9b22bf
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: a7e6b604-5110-4a14-b987-7d10a63896b1
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manager
+		dataType: string
+		lineageTag: 7145f75e-d52a-4c5c-b0c1-f550153dae14
+		summarizeBy: none
+		sourceColumn: Manager
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 909c0f7a-bce4-4da2-b5d6-9f0afb6836f0
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCode
+		dataType: int64
+		formatString: 0
+		lineageTag: d328c5d2-8b5b-400c-ad81-eda05f5158bc
+		summarizeBy: count
+		sourceColumn: ZipCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Remark
+		dataType: string
+		lineageTag: 238cd336-f948-4a25-89ea-1664d81649fa
+		summarizeBy: none
+		sourceColumn: Remark
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sales_2025 = m
+		mode: import
+		source =
+				let
+				    원본 = Csv.Document(File.Contents("C:\Users\82103\Downloads\Sales_2025.csv"),[Delimiter=",", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"승격된 헤더" = Table.PromoteHeaders(원본, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"OrderID", Int64.Type}, {"OrderDate", type text}, {"CustomerID", type text}, {"CustomerName", type text}, {"Region", type text}, {"ProductCode", type text}, {"ProductName", type text}, {"Category", type text}, {"Qty", Int64.Type}, {"UnitPrice", Int64.Type}, {"Sales", Int64.Type}, {"Status", type text}, {"Manager", type text}, {"Phone", type text}, {"ZipCode", Int64.Type}, {"Remark", type text}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_NavigationStepName = 탐색
+
+	annotation PBI_ResultType = Table
+

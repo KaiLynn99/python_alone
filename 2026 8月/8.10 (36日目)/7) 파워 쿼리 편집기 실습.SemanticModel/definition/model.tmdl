@@ -1,0 +1,24 @@
+model Model
+	culture: ko-KR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ko-KR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["전처리 실습","Sales_2024","Sales_2025","x"]
+
+ref table '전처리 실습'
+ref table DateTableTemplate_cb0c38a0-fc1f-49ae-b70f-8f0103967d2f
+ref table LocalDateTable_c0c9c0a1-1d9b-482d-a43f-71210d8b5ebe
+ref table Sales_2024
+ref table LocalDateTable_0cdec44e-4205-4378-9ee8-8ba2633ba5ef
+ref table Sales_2025
+
+ref cultureInfo ko-KR
+

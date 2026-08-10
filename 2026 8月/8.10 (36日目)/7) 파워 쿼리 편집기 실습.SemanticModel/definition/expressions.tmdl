@@ -1,0 +1,8 @@
+/// x값보다 sales가 크면 "VIP" 아니면 "일반"
+expression x = 3000 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: 008b74a3-c97d-411f-8fda-901126298a81
+
+	annotation PBI_NavigationStepName = 탐색
+
+	annotation PBI_ResultType = Number
+
