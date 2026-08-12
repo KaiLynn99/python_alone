@@ -1,3 +1,6 @@
 !sql_study/results/
 !sql_study/results/**/
 !sql_study/results/**/*.csv
+
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
