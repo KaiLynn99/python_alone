@@ -19,30 +19,51 @@ Power BIは、データを分析・可視化し、意思決定を支援する`�
 #### ※ データ分析および手順
 
 ```mermaid
+---
+config:
+  block:
+    padding: 15
+---
 block
-    columns 5
+    columns 3
 
-    A["📥 データ取得<br/>────────────<br/>・Excel<br/>・CSV / Text<br/>・Database<br/>・Web / Folder"]
-    space
-    B["🛠️ データ前処理<br/>────────────<br/>・データ型の変更<br/>・欠損値処理<br/>・重複削除<br/>・Null値処理"]
-    space
-    C["🔗 データモデリング<br/>────────────<br/>・リレーションシップ設定<br/>・DAX計算<br/>・Measure作成<br/>・階層構造"]
+    block:G1
+        A["📥 データ取得<br/>────────────<br/>・Excel<br/>・CSV / Text<br/>・Database<br/>・Web / Folder"]
+    end
 
-    space:5
+    block:G2
+        B["🛠️ データ前処理<br/>────────────<br/>・データ型の変更<br/>・欠損値処理<br/>・重複削除<br/>・Null値処理"]
+    end
 
-    D["📊 データ可視化<br/>────────────<br/>・各種チャート<br/>・対話型レポート<br/>・Dashboard<br/>・Drill Down"]
-    space
-    E["💡 インサイト抽出<br/>────────────<br/>・傾向分析<br/>・パターン発見<br/>・主要指標の確認<br/>・原因分析"]
-    space
-    F["🎯 意思決定支援<br/>────────────<br/>・戦略策定<br/>・成果改善<br/>・業務最適化<br/>・データに基づく意思決定"]
+    block:G3
+        C["🔗 データモデリング<br/>────────────<br/>・リレーションシップ設定<br/>・DAX計算<br/>・Measure作成<br/>・階層構造"]
+    end
+
+    block:G4
+        D["📊 データ可視化<br/>────────────<br/>・各種チャート<br/>・対話型レポート<br/>・Dashboard<br/>・Drill Down"]
+    end
+
+    block:G5
+        E["💡 インサイト抽出<br/>────────────<br/>・傾向分析<br/>・パターン発見<br/>・主要指標の確認<br/>・原因分析"]
+    end
+
+    block:G6
+        F["🎯 意思決定支援<br/>────────────<br/>・戦略策定<br/>・成果改善<br/>・業務最適化<br/>・データに基づく意思決定"]
+    end
 
     A --> B
     B --> C
     C --> D
     D --> E
     E --> F
-```
 
+    style G1 fill:transparent,stroke:transparent
+    style G2 fill:transparent,stroke:transparent
+    style G3 fill:transparent,stroke:transparent
+    style G4 fill:transparent,stroke:transparent
+    style G5 fill:transparent,stroke:transparent
+    style G6 fill:transparent,stroke:transparent
+```
 ---
 
 ## 2. Power BIの構成要素
