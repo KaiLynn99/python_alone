@@ -67,7 +67,7 @@
 
 #### 1) 数値型データ：`Age`、`Score`
 
-![alt text](images/image-7.png)
+![alt text](../images/image-7.png)
 
 - `平均値`：一般的によく使用されるが、外れ値の影響を受けやすい
 - `中央値`：外れ値の影響を受けにくいため、外れ値が多い場合に適している
@@ -81,17 +81,17 @@
 3. 表やリストに変換せず、表示された値だけを確認・コピーする
 4. 必要な値を確認したら、適用せずに操作を取り消す
 
-![alt text](images/image-4.png)
+![alt text](../images/image-4.png)
 
 ##### - 処理
 
 カラム名 右クリック → 値を変更
 
-![alt text](images/image-9.png)
+![alt text](../images/image-9.png)
 
 ##### - 結果
 
-![alt text](images/image-8.png)
+![alt text](../images/image-8.png)
 
 ---
 
@@ -99,7 +99,7 @@
 
 カテゴリ型データでは平均値を使用できないため、**最頻値または `"Unknown"`** などで欠損値を処理する。
 
-![alt text](images/image-10.png)
+![alt text](../images/image-10.png)
 
 #### ① 最頻値で補完
 
@@ -111,7 +111,7 @@
 2. `値の分布` から最も多い値を確認
 3. 最も`頻繁に現れる値`を使用する。
 
-![alt text](images/image-11.png)
+![alt text](../images/image-11.png)
 
 #### ② `"Unknown"` で補完
 
@@ -119,7 +119,7 @@
 
 #### - 結果
 
-![alt text](images/image-12.png)
+![alt text](../images/image-12.png)
 
 > 「情報が存在しない」という状態自体に意味がある場合は、`Unknown` として残す方法が適している。
 
@@ -139,7 +139,7 @@
 
 `OrderDate` を右クリック →「**フィル**」→「**下へ**」
 
-<img src="images/image-13.png" width="180">
+<img src="../images/image-13.png" width="180">
 
 → 直前の日付を使って欠損値を補完する。
 
