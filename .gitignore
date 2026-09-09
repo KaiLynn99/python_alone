@@ -4,3 +4,10 @@
 
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+
+# Python virtual environments
+**/.venv*/
+
+# Python cache
+**/__pycache__/
+*.pyc
